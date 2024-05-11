@@ -43,6 +43,23 @@ const Home = () => {
             </div>
       </div>
            </div>
+           <div className="Faq">
+           <h2 className="section-title text-4xl font-bold mt-4 text-center mb-8">Frequently Asked Questions</h2>
+        <div className="faq-list text-1xl font-semibold ml-9">
+          <div className="faq-item">
+            <h3 className="faq-question">What is this website about?</h3>
+            <p className="faq-answer">Ans: This website is a platform for managing assignments and tasks.</p>
+          </div>
+          <div className="faq-item">
+            <h3 className="faq-question">How do I register?</h3>
+            <p className="faq-answer">Ans: To register, click on the "Register" link in the navbar and follow the instructions.</p>
+          </div>
+          <div className="faq-item">
+            <h3 className="faq-question">Can I create my own assignments?</h3>
+            <p className="faq-answer">Ans: Yes, after logging in, you can create assignments by clicking on the "Create Assignments" link.</p>
+          </div>
+        </div>
+           </div>
         </div>
     )
 }

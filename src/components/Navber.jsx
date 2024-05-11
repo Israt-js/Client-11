@@ -26,6 +26,7 @@ const Navber = () => {
       </div>
       <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
       <li><a href="#">Assignments</a></li>
+      <li><Link to={'/register'}>Register</Link></li>
           <>
           <li><Link to={'/register'}>Create Assignments</Link></li>
           <li><Link to={'/register'}>Pending Assignments</Link></li>
