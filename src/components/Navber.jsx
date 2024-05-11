@@ -27,10 +27,6 @@ const Navber = () => {
       <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
       <li><a href="#">Assignments</a></li>
           <>
-            <li><Link to={'/login'}>Login</Link></li>
-            <li><Link to={'/register'}>Register</Link></li>
-          </>
-          <>
           <li><Link to={'/register'}>Create Assignments</Link></li>
           <li><Link to={'/register'}>Pending Assignments</Link></li>
             <li>
@@ -48,15 +44,11 @@ const Navber = () => {
             </>
       </ul>
     </div>
-    <img className="btn btn-ghost text-xl h-28 w-28" src="https://i.ibb.co/CW0XJbR/438089751-1912190849219342-5243083842823283929-n-removebg-preview.png" alt="" />
+    <Link to={"/"}><img className="btn btn-ghost text-xl h-28 w-28" src="https://i.ibb.co/CW0XJbR/438089751-1912190849219342-5243083842823283929-n-removebg-preview.png" alt="" /></Link>
   </div>
   <div className="navbar-center hidden lg:flex">
   <ul className="menu menu-horizontal px-1">
         <li><a href="#">Assignments</a></li>
-          <>
-          <li><Link to={'/login'}>Login</Link></li>
-          <li><Link to={'/register'}>Register</Link></li>
-          </>
           <>
           <li><Link to={'/register'}>Create Assignments</Link></li>
           <li><Link to={'/register'}>Pending Assignments</Link></li>
@@ -81,10 +73,10 @@ const Navber = () => {
                         user ? 
                         <>
                             <li><img src={user.photoURL} alt="User" title={user.displayName} className="rounded-full h-8 w-8 mt-2 mr-2" /></li>
-                            <li className="btn btn-success text-white m-1"><a onClick={handleLogOut} href="#">LogOut</a></li>
+                            <li className="btn bg-orange-500 text-white m-1"><a onClick={handleLogOut} href="#">LogOut</a></li>
                         </>
                         :
-                        <li><Link className="btn btn-success text-white m-1" to={'/login'}>Login</Link></li>
+                        <li><Link className="btn bg-orange-500 text-white m-1" to={'/login'}>Login</Link></li>
                         
                     }
                   </ul>

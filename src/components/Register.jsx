@@ -45,7 +45,7 @@ import { AuthContext } from './AuthProvider';
   return (
     <div>
       <div className="hero min-h-screen bg-base-200">
-        <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+        <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100 mr-96">
         <h1 className="text-5xl font-bold text-center pt-2">Register</h1>
           <form onSubmit={handleSubmit} className="card-body">
           <div className="form-control">
@@ -79,7 +79,7 @@ import { AuthContext } from './AuthProvider';
               </div>
             </div>
             <div className="form-control mt-6">
-              <button type="submit" className="btn btn-success text-white">Register</button>
+              <button type="submit" className="btn bg-orange-500 text-white">Register</button>
             </div>
           </form>
           {
@@ -87,6 +87,9 @@ import { AuthContext } from './AuthProvider';
           }
           <ToastContainer></ToastContainer>
           <p className='text-2xl font-medium text-center p-5'>Already have an account? <Link to={'/login'} >Login</Link> </p>
+        </div>
+        <div className="">
+           <img className="h-96 w-96 ml-96" src="https://i.ibb.co/ZggSWgz/438065230-462939463083308-3398277295200122591-n-removebg-preview.png" alt="" />
         </div>
       </div>
     </div>

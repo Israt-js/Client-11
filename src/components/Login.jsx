@@ -65,8 +65,8 @@ const Login = () => {
 
   return (
     <div>
-      <div className="hero min-h-screen bg-base-200">
-        <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+      <div className="hero min-h-screen bg-base-200 flex">
+        <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100 ml-96">
         <h1 className="text-5xl font-bold text-center">Login now!</h1>
           <form onSubmit={handleSubmit} className="card-body">
             <div className="form-control">
@@ -82,7 +82,7 @@ const Login = () => {
               <input type="password" name="password" placeholder="password" className="input input-bordered" required />
             </div>
             <div className="form-control mt-6">
-              <button type="submit" className="btn btn-success text-white">Login</button>
+              <button type="submit" className="btn bg-orange-500 text-white">Login</button>
             </div>
           </form>
           <ToastContainer></ToastContainer>
@@ -93,8 +93,10 @@ const Login = () => {
       </div>
       <p className='text-2xl font-medium text-center p-5'>Don't have an account? <Link to={'/register'}>Register</Link></p>
         </div>
+        <div className="">
+           <img className="h-96 w-96" src="https://i.ibb.co/SsMCptr/438083689-1427408247904350-993845579825232253-n-removebg-preview.png" alt="" />
+        </div>
       </div>
-
     </div>
   );
 };
