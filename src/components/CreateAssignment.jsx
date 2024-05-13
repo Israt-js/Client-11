@@ -3,7 +3,30 @@ const CreateAssignment = () => {
   const createAssignment = event =>{
 
     event.preventDefault();
-    
+    const form = event.target;
+    const title = form.title.value;
+    const description = form.description.value;
+    const marks = form.marks.value;
+    const thumbnailUrl = form.thumbnailUrl.value;
+    const difficulty = form.difficulty.value;
+    const createAssign = { title, description, marks, thumbnailUrl, difficulty };
+    console.log(createAssign);
+
+      fetch('http://localhost:5000/createAssign', {
+     method: 'POST',
+     headers: {
+       'content-type': 'application/json'
+     },
+     body: JSON.stringify(createAssign)
+    })
+    .then(res => res.json())
+    .then(createAssign => {
+     console.log(createAssign);
+     if(createAssign.insertedId){
+       alert('Users added successfully')
+       form.reset()
+     }
+    })
 }
     return (
       <div className="">
