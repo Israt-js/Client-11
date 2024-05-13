@@ -1,9 +1,9 @@
 const CreateAssignment = () => {
 
     return (
-     <div className="">
-       
-     </div>
+      <div className="">
+
+    </div>
     )
   }
   

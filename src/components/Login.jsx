@@ -26,7 +26,7 @@ const Login = () => {
       .then(result => {
         console.log(result.user);
         setSuccess('Successfully created User');
-        toast.success('Successfully registered!', {
+        toast.success('Successfull!', {
   
         });
         e.target.reset();

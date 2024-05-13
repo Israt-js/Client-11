@@ -28,7 +28,7 @@ const Navber = () => {
       <li><a href="#">Assignments</a></li>
       <li><Link to={'/register'}>Register</Link></li>
           <>
-          <li><Link to={'/register'}>Create Assignments</Link></li>
+          <li><Link to={'/create'}>Create Assignments</Link></li>
           <li><Link to={'/register'}>Pending Assignments</Link></li>
             <li>
               <div className="user-avatar" onClick={handleDropdownClick}>
@@ -51,7 +51,7 @@ const Navber = () => {
   <ul className="menu menu-horizontal px-1">
         <li><a href="#">Assignments</a></li>
           <>
-          <li><Link to={'/register'}>Create Assignments</Link></li>
+          <li><Link to={'/create'}>Create Assignments</Link></li>
           <li><Link to={'/register'}>Pending Assignments</Link></li>
             <li>
               <div className="user-avatar" onClick={handleDropdownClick}>
