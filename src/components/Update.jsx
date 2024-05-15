@@ -1,38 +1,45 @@
-const CreateAssignment = () => {
+import { useLoaderData } from "react-router-dom";
 
-  const createAssignment = event =>{
+const Update = () => {
+    const updatee = useLoaderData()
+    const { id } = updatee;
 
-    event.preventDefault();
-    const form = event.target;
-    const title = form.title.value;
-    const description = form.description.value;
-    const marks = form.marks.value;
-    const thumbnailUrl = form.thumbnailUrl.value;
-    const difficulty = form.difficulty.value;
-    const createAssign = { title, description, marks, thumbnailUrl, difficulty };
-    console.log(createAssign);
-
-      fetch('http://localhost:5000/createAssign', {
-     method: 'POST',
-     headers: {
-       'content-type': 'application/json'
-     },
-     body: JSON.stringify(createAssign)
-    })
-    .then(res => res.json())
-    .then(createAssign => {
-     console.log(createAssign);
-     if(createAssign.insertedId){
-       alert('Users added successfully')
-       form.reset()
-     }
-    })
-}
-    return (
+    const updateAssignment = event => {
+        event.preventDefault();
+        const form = event.target;
+        const title = form.title.value;
+        const description = form.description.value;
+        const marks = form.marks.value;
+        const thumbnailUrl = form.thumbnailUrl.value;
+        const difficulty = form.difficulty.value;
+        const update = { title, description, marks, thumbnailUrl, difficulty };
+        console.log(update);
+    
+        const { _id } = updatee; 
+    
+        fetch(`http://localhost:5000/createAssign/${id}`, { 
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(update)
+        })
+        .then(res => res.json())
+        .then(result => {
+            console.log(result);
+            if (result) {
+                alert('Update successfully');
+                form.reset();
+            }
+        });
+    }
+    
+    
+    return(
       <div className="">
-      <div className="hero min-h-screen bg-base-200 m-6">
-      <h2>Create your own Assignment</h2>
-        <form onSubmit={createAssignment} className="card shrink-0 w-[45%] shadow-2xl bg-[#F4F3F0] m-4">
+<div className="hero min-h-screen bg-base-200 m-6">
+    <h2>Update</h2>
+    <form onSubmit={updateAssignment} className="card shrink-0 w-[45%] shadow-2xl bg-[#F4F3F0] m-4">
         <div className="form-control">
           <label htmlFor="title" className="label m-2">
             <span className="label-text">Title</span>
@@ -67,11 +74,10 @@ const CreateAssignment = () => {
             <option value="hard">Hard</option>
           </select>
         </div>
-        <button type="submit" className="btn bg-orange-500 m-2">Create Assignment</button>
+        <input type="submit" value="Update" className="btn w-[97%] bg-slate-700 text-white ml-2" />
         </form>
-      </div>
     </div>
+     </div>
     )
-  }
-  
-  export default CreateAssignment;
+}
+export default Update;
